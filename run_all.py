@@ -8,6 +8,7 @@ import unittest
 import os
 from libray.HTMLTestRunnerNew import HTMLTestRunner
 from common.dirpath import TESTCASEPATH,REPORTPATH
+from common.handlemail import sendemai
 
 suit = unittest.TestSuite()
 
@@ -20,3 +21,4 @@ runner = HTMLTestRunner(stream=open(os.path.join(REPORTPATH,'result.html'),'wb')
                         description='前程贷相关接口',
                         tester='roody')
 runner.run(suit)
+sendemai('result.htnl','测试报告')

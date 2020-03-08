@@ -38,4 +38,4 @@ def sendemai(filename,title):
         #第三步发送邮件
         smtp.send_message(msg,from_addr=conf.get('email','from_addr'),
                           to_addrs=eval(conf.get('email','to_addrs')))
-sendemai('result.html','测试报告')
+#sendemai('result.html','测试报告')
